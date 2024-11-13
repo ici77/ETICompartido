@@ -1,10 +1,12 @@
 package DAMeti;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 
 public class ConfirmacionController {
@@ -18,9 +20,9 @@ public class ConfirmacionController {
     }
 
     // Acción al hacer clic en "Aceptar"
-    public void aceptarAction() {
-        try {
-            // Cerrar la ventana de confirmación
+    public void aceptarAction(ActionEvent event) {
+       
+           /* // Cerrar la ventana de confirmación
             Stage stage = (Stage) mensajeConfirmacion.getScene().getWindow();
             stage.close();
             
@@ -32,9 +34,11 @@ public class ConfirmacionController {
             Stage primaryStage = new Stage();
             primaryStage.setTitle("Pantalla de Inicio");
             primaryStage.setScene(new Scene(root, 800, 600)); // Ajusta el tamaño según sea necesario
-            primaryStage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
+            primaryStage.show();*/
+                // Obtiene el stage (ventana actual)
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                // Cierra la ventana
+                stage.close();
+        
         }
     }
-}

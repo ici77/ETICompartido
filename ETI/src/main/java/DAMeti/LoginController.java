@@ -79,7 +79,7 @@ public class LoginController {
                 Alumno alumno = obtenerAlumno(usuario, contraseña); // Obtenemos el objeto Alumno
                 
                 if (alumno != null) {
-                    mostrarAlerta(AlertType.INFORMATION, "Verificación exitosa", "HOLA " + alumno.getNombre());
+                    mostrarAlerta(AlertType.INFORMATION, "Verificación exitosa", "Hola, " + alumno.getNombre());
                     
                     // Cargar la vista del BienvenidoController
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/DAM/ETI/bienvenidoAlumno.fxml"));
@@ -229,7 +229,24 @@ public class LoginController {
             e.printStackTrace();
         }
     }
+    @FXML
+    private void handleBackButtonAction(ActionEvent event) {
+    	App.changeScene((Stage) ((Node) event.getSource()).getScene().getWindow(), "/DAM/ETI/inicio.fxml");
 
+    }
+
+
+    @FXML
+    private void handleInicioButtonAction(ActionEvent event) throws IOException {
+        // Cargar y mostrar la vista inicio.fxml
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/DAM/ETI/inicio.fxml"));
+        Parent inicioView = loader.load();
+        Scene inicioScene = new Scene(inicioView);
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(inicioScene);
+        stage.show();
+    }
 
     // Muestra alertas de información o error
     private void mostrarAlerta(AlertType tipo, String titulo, String mensaje) {

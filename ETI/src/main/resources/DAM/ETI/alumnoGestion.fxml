@@ -39,12 +39,14 @@
         </TableView>
 
         <!-- Botones Modificar y Eliminar centrados -->
-        <Button layoutX="268.0" layoutY="529.0" onAction="#modificarUsuario" prefHeight="48.0" prefWidth="117.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #D1C0EB; -fx-background-radius: 15; -fx-padding: 5px 20px;" text="Modificar" />
-        <Button layoutX="447.0" layoutY="529.0" onAction="#eliminarUsuario" prefHeight="48.0" prefWidth="117.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #D1C0EB; -fx-background-radius: 15; -fx-padding: 5px 20px;" text="Eliminar" />
+        <Button layoutX="262.0" layoutY="528.0" onAction="#modificarUsuario" prefHeight="48.0" prefWidth="117.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #D1C0EB; -fx-background-radius: 15; -fx-padding: 5px 20px;" text="Modificar" />
+        <Button layoutX="441.0" layoutY="528.0" onAction="#eliminarUsuario" prefHeight="48.0" prefWidth="117.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #D1C0EB; -fx-background-radius: 15; -fx-padding: 5px 20px;" text="Eliminar" />
 
         <!-- Mensaje de Error -->
         <Label fx:id="lblMensaje" layoutX="50.0" layoutY="500.0" textFill="#FF0000" />
-      <Button layoutX="22.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleBackButtonAction" style="-fx-background-color: #D1C0EB; -fx-background-radius: 15;" text="Atrás" />
-      <Button layoutX="67.0" layoutY="21.0" minWidth="30.0" mnemonicParsing="false" onAction="#handleInicioButtonAction" prefHeight="18.0" prefWidth="45.0" style="-fx-background-color: #D1C0EB; -fx-background-radius: 15;" text="Inicio" />
+
+        <!-- Botones Atrás e Inicio -->
+        <Button layoutX="22.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleBackButtonAction" style="-fx-background-color: #D1C0EB; -fx-background-radius: 15;" text="Atrás" />
+        <Button layoutX="67.0" layoutY="21.0" minWidth="30.0" mnemonicParsing="false" onAction="#handleInicioButtonAction" prefHeight="18.0" prefWidth="45.0" style="-fx-background-color: #D1C0EB; -fx-background-radius: 15;" text="Inicio" />
     </children>
 </AnchorPane>

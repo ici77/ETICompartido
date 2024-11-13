@@ -14,7 +14,6 @@
         <TextField fx:id="txtNombre" layoutX="22.0" layoutY="137.0" prefHeight="35.0" prefWidth="315.0" style="-fx-background-color: #FFFFFF;" />
 
         <Label layoutX="22.0" layoutY="185.0" style="-fx-font-weight: bold;" text="Curso" />
-        <!-- Cambiado de TextField a ComboBox para seleccionar el curso -->
         <ComboBox fx:id="comboCurso" layoutX="22.0" layoutY="215.0" prefHeight="35.0" prefWidth="315.0" promptText="Selecciona el curso" style="-fx-background-color: #FFFFFF;" />
 
         <Label layoutX="22.0" layoutY="255.0" style="-fx-font-weight: bold;" text="Tutor" />

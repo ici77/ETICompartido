@@ -168,8 +168,21 @@ public class PrestamoController {
             mostrarAlerta("Error al eliminar préstamo", "Hubo un problema al eliminar el préstamo de la base de datos.");
         }
     }
+    @FXML
+    private void handleBackButtonAction(ActionEvent event) {
+        App.changeScene((Stage) ((Node) event.getSource()).getScene().getWindow(), "/DAM/ETI/admin2.fxml");
+    }
 
-    
+    @FXML
+    private void handleInicioButtonAction(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/DAM/ETI/inicio.fxml"));
+        Parent inicioView = loader.load();
+        Scene inicioScene = new Scene(inicioView);
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(inicioScene);
+        stage.show();
+    }
 
     private void mostrarAlerta(String titulo, String mensaje) {
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);

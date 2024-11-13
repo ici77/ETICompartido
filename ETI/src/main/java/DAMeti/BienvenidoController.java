@@ -19,20 +19,18 @@ public class BienvenidoController {
 	@FXML
     private Label lblNombre;
 
-    @FXML
-    private Label lblCurso;
+    
 
     private Alumno alumno;  // Crear una variable Alumno para usar en el controlador
 
     // Método para recibir datos del alumno
     public void cargarDatosAlumno(int id, String nombre, int curso) {
         this.alumno = new Alumno(id, nombre, curso, nombre, nombre, nombre, nombre);  // Guardamos el alumno
-        lblNombre.setText("Nombre: " + nombre);
-        lblCurso.setText("Curso: " + curso);
+        lblNombre.setText(nombre);
     }
     @FXML
     private void handleBackButtonAction(ActionEvent event) {
-        cambiarEscena((Stage) ((Node) event.getSource()).getScene().getWindow(), "/DAM/ETI/alumno1.fxml");
+        cambiarEscena((Stage) ((Node) event.getSource()).getScene().getWindow(), "/DAM/ETI/login.fxml");
     }
 
     @FXML

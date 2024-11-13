@@ -346,6 +346,22 @@ public class PeticionesController {
             e.printStackTrace();
         }
     }
+    
+    @FXML
+    private void handleBackButtonAction(ActionEvent event) {
+        App.changeScene((Stage) ((Node) event.getSource()).getScene().getWindow(), "/DAM/ETI/admin2.fxml");
+    }
+
+    @FXML
+    private void handleInicioButtonAction(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/DAM/ETI/inicio.fxml"));
+        Parent inicioView = loader.load();
+        Scene inicioScene = new Scene(inicioView);
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(inicioScene);
+        stage.show();
+    }
 
 
     @FXML

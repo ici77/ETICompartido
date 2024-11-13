@@ -7,27 +7,33 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: EADDFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DAMeti.InicioController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: EADDFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DAMeti.InicioController">
    <children>
-      <Button fx:id="btnAlumno" layoutX="353.0" layoutY="84.0" mnemonicParsing="false" onAction="#handleAlumnoButtonAction" prefHeight="133.0" prefWidth="219.0" style="-fx-background-color: D1C0EB; -fx-background-radius: 15;" text="ALUMNO">
+      <!-- Botón Alumno -->
+      <Button fx:id="btnAlumno" layoutX="512.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleAlumnoButtonAction" prefHeight="162.0" prefWidth="244.0" style="-fx-background-color: D1C0EB; -fx-background-radius: 15;" text="ALUMNO">
          <font>
             <Font name="Comic Sans MS" size="31.0" />
          </font>
       </Button>
-     <Button layoutX="353.0" layoutY="232.0" mnemonicParsing="false" onAction="#handleAdminButtonAction" prefHeight="133.0" prefWidth="219.0" style="-fx-background-color: D1C0EB; -fx-background-radius: 15;" text="ADMIN">
-    <font>
-        <Font name="Comic Sans MS" size="31.0" />
-    </font>
-	</Button>
 
-      <ImageView fitHeight="299.0" fitWidth="307.0" layoutX="27.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+      <!-- Botón Admin -->
+      <Button layoutX="512.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleAdminButtonAction" prefHeight="162.0" prefWidth="244.0" style="-fx-background-color: D1C0EB; -fx-background-radius: 15;" text="ADMIN">
+         <font>
+            <Font name="Comic Sans MS" size="31.0" />
+         </font>
+      </Button>
+
+      <!-- Imagen -->
+      <ImageView fitHeight="443.0" fitWidth="451.0" layoutX="36.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/1.png" />
          </image>
       </ImageView>
-      <Text layoutX="66.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIENVENIDO A TU BIBLIOTECA">
+
+      <!-- Título principal -->
+      <Text layoutX="118.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIENVENIDO A TU BIBLIOTECA">
          <font>
-            <Font name="Comic Sans MS" size="29.0" />
+            <Font name="Comic Sans MS" size="35.0" />
          </font>
       </Text>
    </children>

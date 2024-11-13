@@ -5,53 +5,87 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #EADDFF; -fx-border-color: #4B0082; -fx-border-width: 15;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DAMeti.PedirLibroController">
     <children>
         <!-- Título de la sección centrado -->
-        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="32.0" prefHeight="48.0" prefWidth="700.0" style="-fx-font-weight: bold;" text="Gestión de Libros" textAlignment="CENTER" textFill="#000000">
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="32.0" prefHeight="48.0" prefWidth="300.0" style="-fx-font-weight: bold;" text="Petición de Libros" textAlignment="CENTER" textFill="#000000">
             <font>
-                <Font size="24.0" />
+                <Font name="Comic Sans MS" size="25.0" />
             </font>
         </Label>
 
-       <!-- Botones para seleccionar asignaturas en dos filas -->
-<VBox layoutX="50.0" layoutY="80.0" spacing="10">
-    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="700.0" spacing="10">
-        <Button onAction="#filtrarLibrosPorAsignatura" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: #B4E4B0; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Lengua" />
-        <Button onAction="#filtrarLibrosPorAsignatura" style="-fx-background-color: #FFEEA9; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Inglés" />
-        <Button onAction="#filtrarLibrosPorAsignatura" style="-fx-background-color: #F9B4BC; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Matemáticas" />
-        <Button onAction="#filtrarLibrosPorAsignatura" style="-fx-background-color: #B3D7F2; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Francés" />
-    </HBox>
+        <!-- Botones de asignaturas colocados con coordenadas absolutas -->
+        <Button layoutX="182.0" layoutY="94.0" onAction="#filtrarLibrosPorAsignatura" prefHeight="38.0" prefWidth="120.0" style="-fx-background-color: #B4E4B0; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Lengua">
+            <font>
+                <Font name="Comic Sans MS" size="13.0" />
+            </font>
+        </Button>
+        <Button layoutX="316.0" layoutY="94.0" onAction="#filtrarLibrosPorAsignatura" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #FFEEA9; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Inglés">
+            <font>
+                <Font name="Comic Sans MS" size="13.0" />
+            </font>
+        </Button>
+        <Button layoutX="414.0" layoutY="94.0" onAction="#filtrarLibrosPorAsignatura" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #F9B4BC; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Matemáticas">
+            <font>
+                <Font name="Comic Sans MS" size="13.0" />
+            </font>
+        </Button>
+        <Button layoutX="543.0" layoutY="94.0" onAction="#filtrarLibrosPorAsignatura" style="-fx-background-color: #B3D7F2; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Francés">
+            <font>
+                <Font name="Comic Sans MS" size="13.0" />
+            </font>
+        </Button>
+        <Button layoutX="182.0" layoutY="151.0" onAction="#filtrarLibrosPorAsignatura" prefHeight="38.0" prefWidth="120.0" style="-fx-background-color: #B4E4B0; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Conocimiento">
+            <font>
+                <Font name="Comic Sans MS" size="13.0" />
+            </font>
+        </Button>
+        <Button layoutX="316.0" layoutY="150.0" onAction="#filtrarLibrosPorAsignatura" style="-fx-background-color: #FFEEA9; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Plástica">
+            <font>
+                <Font name="Comic Sans MS" size="13.0" />
+            </font>
+        </Button>
+        <Button layoutX="412.0" layoutY="150.0" onAction="#filtrarLibrosPorAsignatura" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #F9B4BC; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Religión">
+            <font>
+                <Font name="Comic Sans MS" size="13.0" />
+            </font>
+        </Button>
+        <Button layoutX="542.0" layoutY="150.0" onAction="#filtrarLibrosPorAsignatura" prefHeight="40.0" prefWidth="89.0" style="-fx-background-color: #B3D7F2; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Música">
+            <font>
+                <Font name="Comic Sans MS" size="13.0" />
+            </font>
+        </Button>
 
-    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="700.0" spacing="10">
-        <Button onAction="#filtrarLibrosPorAsignatura" style="-fx-background-color: #B4E4B0; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Conocimiento" />
-        <Button onAction="#filtrarLibrosPorAsignatura" style="-fx-background-color: #FFEEA9; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Plástica" />
-        <Button onAction="#filtrarLibrosPorAsignatura" style="-fx-background-color: #F9B4BC; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Religión" />
-        <Button onAction="#filtrarLibrosPorAsignatura" style="-fx-background-color: #B3D7F2; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="Música" />
-    </HBox>
-</VBox>
-<Button fx:id="verTodosButton" layoutX="528.0" layoutY="41.0" onAction="#verTodosLibros" style="-fx-background-color: #4B0082; -fx-text-fill: white; -fx-font-size: 14px;" text="Ver Todos los Libros" />
+        <!-- Botón Ver Todos los Libros -->
+        <Button fx:id="verTodosButton" layoutX="327.0" layoutY="485.0" onAction="#verTodosLibros" style="-fx-background-color: #4B0082; -fx-text-fill: white; -fx-font-size: 14px;" text="Ver Todos los Libros">
+            <font>
+                <Font name="Comic Sans MS" size="14.0" />
+            </font>
+        </Button>
 
+        <!-- Botón de Atrás e Inicio -->
+        <Button layoutX="20.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleBackButtonAction" style="-fx-background-color: #D1C0EB; -fx-background-radius: 15;" text="Atrás" />
+        <Button layoutX="65.0" layoutY="21.0" minWidth="30.0" mnemonicParsing="false" onAction="#handleInicioButtonAction" prefHeight="18.0" prefWidth="45.0" style="-fx-background-color: #D1C0EB; -fx-background-radius: 15;" text="Inicio" />
 
         <!-- Tabla de Libros centrada -->
-        <VBox alignment="CENTER" layoutX="50.0" layoutY="220.0" spacing="20">
-             <TableView fx:id="tablaLibros" layoutX="50.0" layoutY="120.0" prefHeight="250.0" prefWidth="700.0">
-                <columns>
-                    <TableColumn fx:id="colTitulo" prefWidth="150.0" text="Título" />
-                    <TableColumn fx:id="colAsignatura" prefWidth="100.0" text="Asignatura" />
-                    <TableColumn fx:id="colCurso" prefWidth="75.0" text="Curso" />
-                    <TableColumn fx:id="colEditorial" prefWidth="100.0" text="Editorial" />
-                    <TableColumn fx:id="colIsbn" prefWidth="100.0" text="ISBN" />
-                    <TableColumn fx:id="colCopias" prefWidth="75.0" text="Copias" />
-                </columns>
-            </TableView>
-        </VBox>
+        <TableView fx:id="tablaLibros" layoutX="51.0" layoutY="220.0" prefHeight="250.0" prefWidth="700.0">
+            <columns>
+                <TableColumn fx:id="colTitulo" prefWidth="128.8" text="Título" />
+                <TableColumn fx:id="colAsignatura" prefWidth="121.6" text="Asignatura" />
+                <TableColumn fx:id="colCurso" prefWidth="98.4" text="Curso" />
+                <TableColumn fx:id="colEditorial" prefWidth="108.8" text="Editorial" />
+                <TableColumn fx:id="colIsbn" prefWidth="108.0" text="ISBN" />
+                <TableColumn fx:id="colCopias" prefWidth="134.4" text="Copias" />
+            </columns>
+        </TableView>
+
         <!-- Botón para solicitar un libro -->
-<Button layoutX="50.0" layoutY="516.0" onAction="#solicitarLibro" prefHeight="35.0" prefWidth="700.0" style="-fx-background-color: #C6A6D2; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="SOLICITAR LIBRO" />
-        
+        <Button layoutX="51.0" layoutY="530.0" onAction="#solicitarLibro" prefHeight="35.0" prefWidth="700.0" style="-fx-background-color: #C6A6D2; -fx-background-radius: 15; -fx-padding: 10px 20px; -fx-font-weight: bold;" text="SOLICITAR LIBRO">
+            <font>
+                <Font name="Comic Sans MS" size="13.0" />
+            </font>
+        </Button>
     </children>
 </AnchorPane>

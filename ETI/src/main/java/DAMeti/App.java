@@ -23,7 +23,7 @@ public class App extends Application {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/DAM/ETI/inicio.fxml"));
             AnchorPane root = loader.load();
 
-            Scene scene = new Scene(root, 600, 400);
+            Scene scene = new Scene(root, 800, 600);
             primaryStage.setScene(scene);
             primaryStage.setTitle("Aplicación de Administración");
             primaryStage.show();

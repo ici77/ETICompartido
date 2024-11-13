@@ -4,6 +4,7 @@ import Modelo.Libro;
 import Modelo.Alumno;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableColumn;
@@ -13,6 +14,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
 
@@ -88,9 +90,16 @@ public class PedirLibroController {
     }
 
     // Método para obtener la conexión
-    private static Connection dameConexion() throws SQLException {
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/eti", "root", "");
+    private static Connection dameConexion() {
+        try {
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/eti", "root", "");
+        } catch (SQLException e) {
+            System.err.println("Error al conectar con la base de datos: " + e.getMessage());
+            e.printStackTrace();
+            return null;
+        }
     }
+
 
     public void initialize() {
         colTitulo.setCellValueFactory(new PropertyValueFactory<>("titulo"));
@@ -201,5 +210,24 @@ public class PedirLibroController {
             e.printStackTrace();
             mostrarAlerta(AlertType.ERROR, "Error al mostrar la confirmación", "Hubo un problema al abrir la pantalla de confirmación.");
         }
+    }
+    
+    @FXML
+    private void handleBackButtonAction(ActionEvent event) {
+    	App.changeScene((Stage) ((Node) event.getSource()).getScene().getWindow(), "/DAM/ETI/login.fxml");
+
+    }
+
+
+    @FXML
+    private void handleInicioButtonAction(ActionEvent event) throws IOException {
+        // Cargar y mostrar la vista inicio.fxml
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/DAM/ETI/inicio.fxml"));
+        Parent inicioView = loader.load();
+        Scene inicioScene = new Scene(inicioView);
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(inicioScene);
+        stage.show();
     }
 }
