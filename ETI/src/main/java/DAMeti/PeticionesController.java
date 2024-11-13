@@ -269,7 +269,6 @@ public class PeticionesController {
              PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
             stmt.executeUpdate();
-            mostrarAlerta("Éxito", "La petición ha sido eliminada tras la validación.");
             cargarPeticiones(); // Recargar la lista de peticiones después de eliminar
         } catch (SQLException e) {
             e.printStackTrace();
@@ -330,9 +329,7 @@ public class PeticionesController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.isPresent() && result.get() == ButtonType.OK) {
             irAVista("/DAM/ETI/Prestamo.fxml", event);  
-        } else {
-            irAVista("/DAM/ETI/inicio.fxml", event);  
-        }
+        } 
     }
 
     private void irAVista(String fxmlFile, ActionEvent event) {

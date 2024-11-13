@@ -126,8 +126,7 @@ public class PrestamoController {
                 // Actualizar el número de copias en la tabla libros al devolver el préstamo
                 actualizarNumeroDeCopias(prestamoSeleccionado.getIdLibro(), 1);
 
-                // Volver a la pantalla de inicio
-                irAVista("/DAM/ETI/inicio.fxml", event);
+               
             } else {
                 mostrarAlerta("Fecha de devolución no válida", "La fecha de devolución no está disponible para este préstamo.");
             }
