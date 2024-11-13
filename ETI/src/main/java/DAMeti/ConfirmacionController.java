@@ -1,0 +1,40 @@
+package DAMeti;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+
+public class ConfirmacionController {
+
+    @FXML
+    private Label mensajeConfirmacion;
+
+    // Método para configurar el mensaje de confirmación
+    public void setMensajeConfirmacion(String mensaje) {
+        mensajeConfirmacion.setText(mensaje);
+    }
+
+    // Acción al hacer clic en "Aceptar"
+    public void aceptarAction() {
+        try {
+            // Cerrar la ventana de confirmación
+            Stage stage = (Stage) mensajeConfirmacion.getScene().getWindow();
+            stage.close();
+            
+            // Cargar la ventana principal (pantalla de inicio)
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/DAM/ETI/inicio.fxml")); 
+            Parent root = loader.load();
+            
+            // Mostrar la ventana de inicio
+            Stage primaryStage = new Stage();
+            primaryStage.setTitle("Pantalla de Inicio");
+            primaryStage.setScene(new Scene(root, 800, 600)); // Ajusta el tamaño según sea necesario
+            primaryStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}

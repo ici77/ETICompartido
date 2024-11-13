@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: EADDFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DAMeti.AlumnoController">
+   <children>
+      <Button fx:id="registroButton" layoutX="43.0" layoutY="45.0" mnemonicParsing="false" onAction="#abrirRegistro" prefHeight="92.0" prefWidth="177.0" style="-fx-background-radius: 15; -fx-background-color: D1C0EB;" text="REGISTRO">
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+      </Button>
+
+      <ImageView fitHeight="330.0" fitWidth="332.0" layoutX="241.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/2.png" />
+         </image>
+      </ImageView>
+      
+      <Button layoutX="43.0" layoutY="166.0" mnemonicParsing="false" onAction="#abrirLogin" prefHeight="92.0" prefWidth="178.0" style="-fx-background-radius: 15; -fx-background-color: D1C0EB; -fx-wrap-text: 10;" text="INICIAR SESIÓN">
+         <font>
+            <Font name="Comic Sans MS" size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="8.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleBackButtonAction" style="-fx-background-color: #D1C0EB; -fx-background-radius: 15;" text="Atrás" />
+      <Button layoutX="53.0" layoutY="7.0" minWidth="30.0" mnemonicParsing="false" onAction="#handleInicioButtonAction" prefHeight="18.0" prefWidth="45.0" style="-fx-background-color: #D1C0EB; -fx-background-radius: 15;" text="Inicio" />
+      <Button fx:id="gestionarLibroButton" layoutX="41.0" layoutY="272.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="178.0" style="-fx-background-color: #D1C0EB; -fx-font-weight: bold; -fx-background-radius: 15;" text="FAQ">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

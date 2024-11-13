@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #EADDFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DAMeti.LoginController">
+    <children>
+        <!-- Fondo decorativo en la parte inferior -->
+        <ImageView fitHeight="245.0" fitWidth="800.0" layoutY="355.0">
+            <image>
+                <Image url="@../img/4.png" />
+            </image>
+        </ImageView>
+
+        <!-- Caja principal para los campos de inicio de sesión, centrada en el medio superior -->
+        <VBox alignment="CENTER" layoutX="128.0" layoutY="54.0" prefHeight="269.0" prefWidth="544.0" spacing="15" style="-fx-background-color: #EADDFF; -fx-background-radius: 15; -fx-border-width: 2;" maxHeight="-Infinity" maxWidth="-Infinity">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de Usuario:">
+                    <font>
+                        <Font name="Comic Sans MS" size="16.0" />
+                    </font>
+                </Text>
+                
+                <!-- Vincular fx:id con el controlador -->
+                <TextField fx:id="txtUsuario" promptText="Ingrese su nombre de usuario" style="-fx-background-radius: 10; -fx-padding: 8; -fx-font-size: 12;">
+                </TextField>
+
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña:">
+                    <font>
+                        <Font name="Comic Sans MS" size="16.0" />
+                    </font>
+                </Text>
+                
+                <!-- Vincular fx:id con el controlador -->
+                <PasswordField fx:id="txtContra" promptText="Ingrese su contraseña" style="-fx-background-radius: 10; -fx-padding: 8; -fx-font-size: 12;">
+                </PasswordField>
+
+                <!-- HBox para alineación horizontal de los elementos inferiores -->
+                <HBox alignment="CENTER" spacing="20" style="-fx-padding: 5;">
+                    <children>
+                        <!-- Etiqueta que llama a la acción de olvidar la contraseña -->
+                        <Label onMouseClicked="#handleOlvidoContrasenaAction" style="-fx-font-size: 12px; -fx-text-fill: #0000EE; -fx-underline: true;" text="¿Olvidaste tu contraseña?" />
+                    </children>
+                </HBox>
+
+                <!-- Botón de iniciar sesión -->
+                <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="42.0" prefWidth="137.0" style="-fx-background-color: #D1C0EB; -fx-background-radius: 15;" text="Iniciar Sesión">
+                    <font>
+                        <Font name="Comic Sans MS" size="15.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
